@@ -36,7 +36,7 @@ Use valkit as an MCP tool for Claude, Cursor, or any MCP-aware IDE.
     "valkit": {
       "command": "valkit",
       "args": ["serve"],
-      "description": "Financial statement analysis — real ratios for any ticker"
+      "description": "Financial statement analysis - real ratios for any ticker"
     }
   }
 }

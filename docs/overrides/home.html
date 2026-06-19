@@ -18,6 +18,17 @@
   flex-direction: column;
   justify-content: center;
 }
+.hero-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.hero-logo {
+  width: 72px;
+  height: 72px;
+  display: block;
+}
 .hero-left h1 {
   font-size: 4.4rem;
   font-weight: 800;
@@ -56,7 +67,10 @@
 
 <div class="hero">
   <div class="hero-left">
-    <h1>valkit</h1>
+    <div class="hero-title">
+      <img src="/assets/valkit-logo.svg" alt="valkit logo" class="hero-logo" />
+      <h1>valkit</h1>
+    </div>
     <p>Financial statement analysis for AI IDEs and coding agents. Scan any ticker, get Piotroski, Altman Z, Beneish M, and a deterministic analyst brief in one command.</p>
     <div class="hero-install">$ pip install valkit</div>
   </div>

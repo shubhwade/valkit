@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://shubhwade.github.io/valkit/</loc>
+         <loc>https://shubhwade.github.io/tellus/</loc>
          <lastmod>2026-06-19</lastmod>
     </url>
     <url>
-         <loc>https://shubhwade.github.io/valkit/changelog/</loc>
+         <loc>https://shubhwade.github.io/tellus/changelog/</loc>
          <lastmod>2026-06-19</lastmod>
     </url>
     <url>
-         <loc>https://shubhwade.github.io/valkit/cli/</loc>
+         <loc>https://shubhwade.github.io/tellus/cli/</loc>
          <lastmod>2026-06-19</lastmod>
     </url>
     <url>
-         <loc>https://shubhwade.github.io/valkit/mcp/</loc>
+         <loc>https://shubhwade.github.io/tellus/mcp/</loc>
          <lastmod>2026-06-19</lastmod>
     </url>
     <url>
-         <loc>https://shubhwade.github.io/valkit/quickstart/</loc>
+         <loc>https://shubhwade.github.io/tellus/quickstart/</loc>
          <lastmod>2026-06-19</lastmod>
     </url>
     <url>
-         <loc>https://shubhwade.github.io/valkit/sdk/</loc>
+         <loc>https://shubhwade.github.io/tellus/sdk/</loc>
          <lastmod>2026-06-19</lastmod>
     </url>
     <url>
-         <loc>https://shubhwade.github.io/valkit/engines/health/</loc>
+         <loc>https://shubhwade.github.io/tellus/engines/health/</loc>
          <lastmod>2026-06-19</lastmod>
     </url>
 </urlset>

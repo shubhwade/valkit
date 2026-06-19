@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 import sys
 from importlib.metadata import version
 
@@ -14,6 +15,11 @@ from telmus.mcp.server import run_mcp_server
 
 app = typer.Typer(help="telmus financial statement analysis CLI")
 console = Console()
+logging.getLogger("telmus").setLevel(logging.ERROR)
+logging.getLogger("telmus.core.engines.health").setLevel(logging.ERROR)
+logging.getLogger("telmus.core.engines.valuation").setLevel(logging.ERROR)
+logging.getLogger("telmus.core.engines.flags").setLevel(logging.ERROR)
+logging.getLogger("telmus.core.engines.growth").setLevel(logging.ERROR)
 
 
 def _format_metric(value: object | None) -> str:

@@ -3,12 +3,30 @@
   --md-code-font: "JetBrains Mono", monospace;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
+code,
+pre,
+tt {
+  font-family: "JetBrains Mono", monospace;
+}
+
 .md-header {
   padding: 0 1rem;
 }
 
 .md-header__title {
   margin-left: 0.4rem;
+}
+
+.md-main__inner {
+  padding-top: 0;
+}
+
+.md-page--home .md-sidebar--primary {
+  display: none;
 }
 
 .md-content__inner {

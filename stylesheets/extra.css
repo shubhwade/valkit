@@ -1,0 +1,21 @@
+:root {
+  --md-text-font: "JetBrains Mono", monospace;
+}
+
+.md-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset p {
+  line-height: 1.8;
+}
+
+.md-typeset table {
+  width: 100%;
+}

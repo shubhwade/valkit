@@ -1,10 +1,11 @@
 from __future__ import annotations
 
+import contextlib
+import io
 import logging
 
 import numpy as np
 import pandas as pd
-import yfinance as yf
 
 from telmus.core.result import ValuationResult
 
@@ -101,6 +102,8 @@ class ValuationEngine:
         equity = _get_series(balance_sheet, "Total Stockholder Equity")
         if equity is None:
             equity = _get_series(balance_sheet, "Total Equity")
+        if equity is None:
+            equity = _get_series(balance_sheet, "Stockholders Equity")
         if equity is not None:
             return _safe_value(equity.iloc[0])
         logger.warning("Book value not found for P/B calculation")
@@ -146,20 +149,23 @@ class ValuationEngine:
         self, sector: str, ticker: object | None = None
     ) -> float | None:
         try:
-            search = yf.Ticker(ticker) if ticker else None
-            if search is None:
-                return None
-            info = search.info
-            peers = info.get("industryPeers") or []
-            peer_ratios = []
-            for peer in peers[:5]:
-                peer_obj = yf.Ticker(peer)
-                peer_info = peer_obj.info or {}
-                ratio = _safe_value(peer_info.get("trailingPE"))
-                if ratio is not None:
-                    peer_ratios.append(ratio)
-            if peer_ratios:
-                return float(np.median(peer_ratios))
+            import yfinance as yf
+
+            with io.StringIO() as dump, contextlib.redirect_stdout(dump), contextlib.redirect_stderr(dump):
+                search = yf.Ticker(ticker) if ticker else None
+                if search is None:
+                    return None
+                info = search.info
+                peers = info.get("industryPeers") or []
+                peer_ratios = []
+                for peer in peers[:5]:
+                    peer_obj = yf.Ticker(peer)
+                    peer_info = peer_obj.info or {}
+                    ratio = _safe_value(peer_info.get("trailingPE"))
+                    if ratio is not None:
+                        peer_ratios.append(ratio)
+                if peer_ratios:
+                    return float(np.median(peer_ratios))
         except Exception:
             logger.warning("Unable to fetch sector peers for %s", sector)
         return None

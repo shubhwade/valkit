@@ -21,10 +21,11 @@ class TelmusScanner:
         flags = FlagsEngine().run(financials)
         duration_ms = int((time.time() - start) * 1000)
 
+        resolved_ticker = financials.get("info", {}).get("symbol") or ticker
         company = (
             financials.get("info", {}).get("longName")
             or financials.get("info", {}).get("shortName")
-            or ticker
+            or resolved_ticker
         )
         exchange = (
             financials.get("info", {}).get("exchange")
@@ -33,7 +34,7 @@ class TelmusScanner:
         )
         brief = generate_brief(
             ScanResult(
-                ticker=ticker,
+                ticker=resolved_ticker,
                 company=company,
                 exchange=exchange,
                 scan_duration_ms=duration_ms,
@@ -47,7 +48,7 @@ class TelmusScanner:
         )
 
         return ScanResult(
-            ticker=ticker,
+            ticker=resolved_ticker,
             company=company,
             exchange=exchange,
             scan_duration_ms=duration_ms,

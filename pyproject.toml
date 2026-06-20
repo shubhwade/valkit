@@ -10,6 +10,9 @@ readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.9"
 authors = [{name = "Shubh Wade", email = "shubhwade@gmail.com"}]
+dependencies = [
+    "openpyxl>=3.0",
+]
 keywords = ["finance", "mcp", "financial-analysis", "piotroski", "altman", "beneish", "yfinance", "ai-agent", "mcp-server", "claude"]
 classifiers = [
     "Development Status :: 3 - Alpha",

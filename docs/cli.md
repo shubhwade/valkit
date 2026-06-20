@@ -22,6 +22,8 @@ telmus scan TICKER [--json] [--export PATH]
 telmus scan INFY
 telmus scan INFY --json
 telmus scan INFY --export infy-report.json
+telmus scan INFY --export infy-report.xlsx
+telmus scan INFY --export infy-report.csv
 ```
 
 **Output**
@@ -29,7 +31,7 @@ The default output includes sections for `Valuation`, `Health`, `Growth`, and `A
 
 **Flags**
 - `--json` return the full structured result as JSON.
-- `--export PATH` save the scan result to a JSON file at the specified path.
+- `--export PATH` save the scan result to a file at the specified path. Supports `.xlsx` (Excel), `.csv` (CSV), and `.json` (JSON) file formats.
 
 ---
 
@@ -45,13 +47,19 @@ Compares two tickers side by side across their financial metrics, making it easy
 
 **Syntax**
 ```bash
-telmus compare TICKER_A TICKER_B
+telmus compare TICKER_A TICKER_B [--export PATH]
 ```
 
-**Example**
+**Examples**
 ```bash
 telmus compare INFY TCS
+telmus compare INFY TCS --export comparison.xlsx
+telmus compare INFY TCS --export comparison.csv
+telmus compare INFY TCS --export comparison.json
 ```
+
+**Flags**
+- `--export PATH` save the comparison results to a file. Supports `.xlsx` (Excel), `.csv` (CSV), and `.json` (JSON) formats.
 
 **Output**
 The comparison table shows metrics such as `P/E`, `P/B`, `EV/EBITDA`, `Piotroski F`, `Altman Z`, `Revenue CAGR 3y`, and `Margin Trend` for both tickers.
@@ -70,18 +78,22 @@ Filters the ticker universe by sector, Piotroski score, and leverage, returning 
 
 **Syntax**
 ```bash
-telmus screen [--sector TEXT] [--min-piotroski INT] [--max-de FLOAT]
+telmus screen [--sector TEXT] [--min-piotroski INT] [--max-de FLOAT] [--export PATH]
 ```
 
-**Example**
+**Examples**
 ```bash
 telmus screen --sector IT --min-piotroski 6 --max-de 1.5
+telmus screen --sector IT --export sector.xlsx
+telmus screen --sector IT --export sector.csv
+telmus screen --sector IT --export sector.json
 ```
 
 **Available flags**
 - `--sector TEXT` filter by industry sector.
 - `--min-piotroski INT` require a minimum Piotroski F-score.
 - `--max-de FLOAT` require a maximum debt-to-equity ratio.
+- `--export PATH` save the screening results to a file. Supports `.xlsx` (Excel), `.csv` (CSV), and `.json` (JSON) formats.
 
 ---
 
@@ -169,14 +181,17 @@ available tools: scan, scan_ticker, compare, screen, info
 
 ## Common workflows
 
-### Perform a scan and save the result
+### Perform a scan and save the result (JSON/Excel/CSV)
 ```bash
+telmus scan INFY --export infy.xlsx
+telmus scan INFY --export infy.csv
 telmus scan INFY --export infy.json
 ```
 
-### Compare two investment candidates
+### Compare two investment candidates (JSON/Excel/CSV)
 ```bash
-telmus compare INFY TCS
+telmus compare INFY TCS --export comparison.xlsx
+telmus compare INFY TCS --export comparison.csv
 ```
 
 ### Start the MCP server for AI integration
@@ -184,7 +199,7 @@ telmus compare INFY TCS
 telmus serve
 ```
 
-### Screen for stronger companies in a sector
+### Screen for stronger companies in a sector (JSON/Excel/CSV)
 ```bash
-telmus screen --sector IT --min-piotroski 7 --max-de 1.2
+telmus screen --sector IT --min-piotroski 7 --max-de 1.2 --export quality_it.xlsx
 ```

@@ -127,7 +127,11 @@ class GrowthEngine:
         cash_from_ops_series = _get_series(
             cashflow, "Total Cash From Operating Activities"
         )
+        if cash_from_ops_series is None:
+            cash_from_ops_series = _get_series(cashflow, "Operating Cash Flow")
         capex_series = _get_series(cashflow, "Capital Expenditures")
+        if capex_series is None:
+            capex_series = _get_series(cashflow, "Capital Expenditure")
         if cash_from_ops_series is None:
             logger.warning("Operating cash flow missing for FCF yield")
             return None

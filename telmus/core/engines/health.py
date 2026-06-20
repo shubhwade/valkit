@@ -261,9 +261,17 @@ class HealthEngine:
         current_assets = _series_value(
             _get_series(balance_sheet, "Total Current Assets"), 0
         )
+        if current_assets is None:
+            current_assets = _series_value(
+                _get_series(balance_sheet, "Current Assets"), 0
+            )
         current_liabilities = _series_value(
             _get_series(balance_sheet, "Total Current Liabilities"), 0
         )
+        if current_liabilities is None:
+            current_liabilities = _series_value(
+                _get_series(balance_sheet, "Current Liabilities"), 0
+            )
         if current_assets is not None and current_liabilities is not None:
             working_capital = _safe_value(current_assets - current_liabilities)
 

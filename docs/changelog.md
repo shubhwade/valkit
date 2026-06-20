@@ -1,3 +1,7 @@
+## v0.1.14 - Terminal ASCII Charts
+- Added native ASCII bar charts directly in the terminal for `scan` and `compare` commands
+- Added Unicode fallback handling for legacy Windows terminals
+
 ## v0.1.13 - Dashboard Layout and Versioning Polish
 - Fixed CSS layout causing Compare dashboard bar charts to overflow horizontally
 - UI components now dynamically read system version instead of hardcoding

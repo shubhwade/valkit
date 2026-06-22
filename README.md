@@ -1,7 +1,7 @@
 # telmus
 
 [![PyPI version](https://img.shields.io/pypi/v/telmus)](https://pypi.org/project/telmus/)
-[![Downloads](https://img.shields.io/pypi/dm/telmus)](https://pypi.org/project/telmus/)
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/telmus?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/telmus)
 [![Python](https://img.shields.io/pypi/pyversions/telmus)](https://pypi.org/project/telmus/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 

@@ -703,7 +703,7 @@ class HtmlDashboardExporter:
                 margin-left:auto;">
                   <span style="color:#00d4aa;
                   font-family:'JetBrains Mono',monospace;
-                  font-weight:700;font-size:0.85rem;">telmus v0.2.5</span>
+                  font-weight:700;font-size:0.85rem;">telmus v0.2.6</span>
                   <button id="printBtn" onclick="window.print()"
                   style="background:transparent;
                   color:#ffffff;
@@ -1347,7 +1347,7 @@ class HtmlDashboardExporter:
                 margin-left:auto;">
                   <span style="color:#00d4aa;
                   font-family:'JetBrains Mono',monospace;
-                  font-weight:700;font-size:0.85rem;">telmus v0.2.5</span>
+                  font-weight:700;font-size:0.85rem;">telmus v0.2.6</span>
                   <button id="printBtn" onclick="window.print()"
                   style="background:transparent;
                   color:#ffffff;
@@ -1668,7 +1668,7 @@ class HtmlDashboardExporter:
             margin-left:auto;">
               <span style="color:#00d4aa;
               font-family:'JetBrains Mono',monospace;
-              font-weight:700;font-size:0.85rem;">telmus v0.2.5</span>
+              font-weight:700;font-size:0.85rem;">telmus v0.2.6</span>
               <button id="printBtn" onclick="window.print()"
               style="background:transparent;
               color:#ffffff;

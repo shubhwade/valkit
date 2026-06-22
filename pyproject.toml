@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "telmus"
-version = "0.2.5"
+version = "0.2.6"
 description = "Financial statement analysis for AI IDEs and coding agents"
 readme = "README.md"
 license = {text = "MIT"}
@@ -18,7 +18,7 @@ dependencies = [
     "yfinance>=0.2.0",
     "mcp>=0.1.0",
 ]
-keywords = ["finance", "mcp", "financial-analysis", "piotroski", "altman", "beneish", "yfinance", "ai-agent", "mcp-server", "claude", "ai", "python"]
+keywords = ["finance", "financial-analysis", "ai", "python", "financial-modeling"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",

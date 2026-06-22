@@ -1,5 +1,5 @@
 site_name: telmus
-site_description: Financial statement analysis MCP server for AI IDEs
+site_description: Financial statement analysis for AI IDEs and coding agents
 docs_dir: docs
 site_url: https://shubhwade.github.io/telmus
 repo_url: https://github.com/shubhwade/telmus

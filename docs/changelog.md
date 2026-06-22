@@ -1,3 +1,7 @@
+## v0.2.6
+### Changed
+- Audited and synchronized package metadata across PyPI, MkDocs, and codebase
+
 ## v0.2.5
 ### Added
 - Updated package metadata with AI keywords for PyPI/Pepy
